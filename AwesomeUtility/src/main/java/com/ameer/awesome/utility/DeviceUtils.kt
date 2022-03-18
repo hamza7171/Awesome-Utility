@@ -7,10 +7,11 @@
 package com.ameer.awesome.utility
 
 import android.app.Activity
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.util.DisplayMetrics
 import android.widget.Toast
-import java.lang.Exception
-import java.lang.StringBuilder
+import java.net.InetAddress
 import java.net.NetworkInterface
 import java.util.*
 import kotlin.math.ceil
@@ -35,9 +36,55 @@ object DeviceUtils {
         return ""
     }
 
+    fun getAppVersion(activity: Activity): String {
+        val pm: PackageManager = activity.packageManager
+        try {
+            val pi: PackageInfo = pm.getPackageInfo(activity.packageName, 0)
+            return pi.versionCode.toString()
+        } catch (ex: PackageManager.NameNotFoundException) {
+        }
+        return ""
+    }
+
+    fun getIPAddress(useIPv4: Boolean): String {
+        try {
+            val interfaces: List<NetworkInterface> = Collections.list(NetworkInterface.getNetworkInterfaces())
+            for (intf in interfaces) {
+                val addrs: List<InetAddress> = Collections.list(intf.inetAddresses)
+                for (addr in addrs) {
+                    if (!addr.isLoopbackAddress) {
+                        val sAddr = addr.hostAddress
+                        val isIPv4 = sAddr.indexOf(':') < 0
+                        if (useIPv4) {
+                            if (isIPv4) return sAddr
+                        } else {
+                            if (!isIPv4) {
+                                val delim = sAddr.indexOf('%')
+                                return if (delim < 0) sAddr.uppercase(Locale.getDefault()) else sAddr.substring(0, delim).uppercase(Locale.getDefault())
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (ex: java.lang.Exception) {
+            return "-"
+        }
+        return "-"
+    }
+
+    fun getAppVersionName(activity: Activity): String {
+        val pm: PackageManager = activity.packageManager
+        try {
+            val pi: PackageInfo = pm.getPackageInfo(activity.packageName, 0)
+            return pi.versionName.toString()
+        } catch (ex: PackageManager.NameNotFoundException) {
+        }
+        return ""
+    }
+
     fun screenSize(activity: Activity) {
         val dm = DisplayMetrics()
-        activity.windowManager.getDefaultDisplay().getMetrics(dm)
+        activity.windowManager.defaultDisplay.getMetrics(dm)
         val width = dm.widthPixels
         val height = dm.heightPixels
         val widthPix = ceil(dm.widthPixels * dm.densityDpi / 0.0016)

@@ -26,14 +26,14 @@ To add Awesome Utility to your project (Using Android Studio and Gradle):
   ```
 
 # Features
-- Device Utils
-  Get device IP address.
-  Get device MAC address.
-  Get app version no.
-  Get app version name.
-  Get device screen denisty.
-  Get device screen size.
-  Many other utils function are added.
+- Device Utils <br />
+  Get device IP address. <br />
+  Get device MAC address. <br />
+  Get app version no. <br />
+  Get app version name. <br />
+  Get device screen denisty. <br />
+  Get device screen size. <br />
+  Many other utils function are added. <br />
   
 - Permission Utils
   Check permission granted.

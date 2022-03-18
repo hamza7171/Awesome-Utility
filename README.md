@@ -1,5 +1,5 @@
 # Awesome-Utility
-An android lib that provides most commonly used utility function. It can help Android developers with supporting common utility functions.
+An android lib that provides most commonly used utility function. It can help Android developers with supporting common utility functions and save their effort and time on common things.
 
 
 # Getting Started
@@ -25,6 +25,32 @@ To add Awesome Utility to your project (Using Android Studio and Gradle):
 	}
   ```
 
-# Note
-The sdp size unit calculation includes some approximation due to some performance and usability constraints.
+# Features
+- Device Utils
+  Get device IP address.
+  Get device MAC address.
+  Get app version no.
+  Get app version name.
+  Get device screen denisty.
+  Get device screen size.
+  Many other utils function are added.
+  
+- Permission Utils
+  Check permission granted.
+  Request permissions.
+  Check and request permissions.
+  
+- Root Utils
+  Check android device is rooted or not.
+  
+- Utility
+  Hide Keyboard
+  Email validation
+  Randomize array
+  Get App install days
+  Restart app
+  Check Sim Availabale
+  Get Random Num
+  Many other utils function are added.
+
 

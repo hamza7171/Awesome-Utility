@@ -35,22 +35,22 @@ To add Awesome Utility to your project (Using Android Studio and Gradle):
   Get device screen size. <br />
   Many other utils function are added. <br />
   
-- Permission Utils
-  Check permission granted.
-  Request permissions.
-  Check and request permissions.
+- Permission Utils <br />
+  Check permission granted. <br />
+  Request permissions. <br />
+  Check and request permissions. <br />
   
-- Root Utils
-  Check android device is rooted or not.
+- Root Utils <br />
+  Check android device is rooted or not. <br />
   
-- Utility
-  Hide Keyboard
-  Email validation
-  Randomize array
-  Get App install days
-  Restart app
-  Check Sim Availabale
-  Get Random Num
-  Many other utils function are added.
+- Utility <br />
+  Hide Keyboard. <br />
+  Email validation. <br />
+  Randomize array. <br />
+  Get App install days. <br />
+  Restart app. <br />
+  Check Sim Availabale. <br />
+  Get Random Num. <br />
+  Many other utils function are added. <br />
 
 

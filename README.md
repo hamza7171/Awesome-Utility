@@ -15,6 +15,15 @@ To add Awesome Utility to your project (Using Android Studio and Gradle):
     implementation 'com.github.hamza7171:Awesome-Utility:1.0'
   }
   ```
+  
+  ```
+  allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  ```
 
 # Note
 The sdp size unit calculation includes some approximation due to some performance and usability constraints.

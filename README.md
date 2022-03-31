@@ -12,7 +12,7 @@ To add Awesome Utility to your project (Using Android Studio and Gradle):
   
   ```
   dependencies {
-    implementation 'com.github.hamza7171:Awesome-Utility:1.0'
+    implementation 'com.github.hamza7171:Awesome-Utility:1.0.1'
   }
   ```
   

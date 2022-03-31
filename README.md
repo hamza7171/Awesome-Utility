@@ -39,6 +39,14 @@ To add Awesome Utility to your project (Using Android Studio and Gradle):
   Check permission granted. <br />
   Request permissions. <br />
   Check and request permissions. <br />
+
+- File Utils <br />
+  Copy file from src to des. <br />
+  Refresh storage. <br />
+  Create internal folder. <br />
+  Get frame from video. <br />
+  Flip a bitmap. <br />
+  Save bitmap to storage. <br />
   
 - Root Utils <br />
   Check android device is rooted or not. <br />
